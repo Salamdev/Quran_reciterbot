@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>مباحثه گر قرآن</title>
+    <script src="js/p5.min.js"></script>
+    <script src="js/p5.sound.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="fonts/btraffic/styles.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body dir="rtl">
+<div class="app centering">
+    <div id="deviceready">
+        <div class="container-fluid">
+            <center>
+                <h4><span class="label label-success form-labels">انتخاب سوره:</span>
+                    <select type="button" id="surah_menu" class="form-control input-style form-labels"></select>
+                    <span class="label label-success form-labels">آیاتی که رایانه می خواند:</span>
+                    <p>
+                        <label class="form-labels input-style">
+                            <input type="radio" name="bot_read" value="zoj" id="bot-read_0">
+                            زوج</label>
+
+                        <label class=" form-labels" style="margin-right: 20px">
+                            <input type="radio" name="bot_read" value="fard" id="bot-read_1">
+                            فرد</label>
+                        <br>
+                    </p>
+                    <div class="col-xs-6 form-group">
+                        <span class="label label-success form-labels">تا آیه ی:</span>
+                        <input type="number" disabled id="ayah-to" class="form-control input-style form-labels"
+                               value="7" max="7"
+                               min="1" required>
+                        </div>
+                    <div class="col-xs-6 form-group">
+                        <span class="label label-success form-labels">از آیه ی:</span>
+                        <input type="number" id="ayah-from" class="form-control input-style form-labels" disabled
+                               value="1" step="2"
+                               max="7" min="1" required>
+                        </div>
+                    <div class="col-xs-6 form-group">
+                        <span class="label label-success form-labels">سرعت تلاوت (%) :</span>
+                        <input type="number" id="play_rate" class="form-control input-style form-labels" value="100"
+                               min="70"
+                               max="300" required></div>
+                    <div class="col-xs-6 form-group">
+                        <span class="label label-success form-labels">تاخیر تلاوت:</span>
+                        <input type="number" id="bot_delay" class="form-control input-style form-labels" value="5"
+                               min="1"
+                               max="100" required></div>
+                    <span class="label label-success form-labels">حساسیت میکروفن:</span>
+                    <input type="number" id="sensitive" class="form-control input-style form-labels" value="30" min="1"
+                           max="500" required></h4>
+
+                    <audio id="player" src="" style="margin-top: 10px;margin-bottom: 10px;max-width: 80%" controls="controls" preload="metadata"
+                           onended="self_recite();"></audio>
+
+                    <p id="audiolevel" class="form-labels"></p>
+                    <button type="button" disabled id="start" onClick="start();" class="btn btn-primary form-labels" style="min-width: 30%">شروع
+                    </button>
+                </center>
+        </div>
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script>
+            var audiolevel = document.getElementById('audiolevel');
+
+            function setup() {
+                frameRate(5);
+                mic = new p5.AudioIn();
+                mic.start();
+            }
+
+            function draw() {
+                micLevel = (mic.getLevel() * 1000).toFixed(2);
+                audiolevel.innerHTML = 'میزان صدای دریافتی: '+micLevel;
+            }
+        </script>
+    </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
