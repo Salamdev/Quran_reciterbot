@@ -1,5 +1,5 @@
-![drawing](./screenshot3.png =1024x768)
+<img src="screenshot3.png" alt="Drawing" style="width:1024px;"/>
 <hr/>
-![drawing](./screenshot2.png =1024x768)
+<img src="screenshot2.png" alt="Drawing" style="width:1024px;"/>
 <hr/>
-![drawing](./screenshot1.png =360x640)
+<img src="screenshot1.png" alt="Drawing" style="width:360px;"/>
