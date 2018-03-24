@@ -1,3 +1,3 @@
-![Alt text](screenshot2.png?raw=true)
-![Alt text](screenshot3.png?raw=true)
-![Alt text](screenshot1.png?raw=true)
+<img src="screenshot3.png" alt="Drawing" style="width: 70%;"/>
+<img src="screenshot2.png" alt="Drawing" style="width: 70%;"/>
+<img src="screenshot1.png" alt="Drawing"/>
