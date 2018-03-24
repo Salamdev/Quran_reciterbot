@@ -1,5 +1,5 @@
-![drawing](./screenshot3.png =1024x)
+![drawing](./screenshot3.png =1024x768)
 <hr/>
-![drawing](./screenshot2.png =1024x)
+![drawing](./screenshot2.png =1024x768)
 <hr/>
-![drawing](./screenshot1.png =360x)
+![drawing](./screenshot1.png =360x640)
