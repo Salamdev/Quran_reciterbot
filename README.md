@@ -1,3 +1,5 @@
-<img src="screenshot3.png" alt="Drawing" style="width: 1024px;border-width: thin;"/>
-<img src="screenshot2.png" alt="Drawing" style="width: 1024px;border-width: thin;"/>
-<img src="screenshot1.png" alt="Drawing" style="width: 360px;border-width: thin;"/>
+![](screenshot3.png =1024x)
+<hr/>
+![](screenshot2.png =1024x)
+<hr/>
+![](screenshot1.png =360x)
