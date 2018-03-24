@@ -8,7 +8,7 @@
     <script src="js/p5.min.js"></script>
     <script src="js/p5.sound.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="fonts/btraffic/styles.css">
+    <link rel="stylesheet" type="text/css" href="fonts/btraffic/styles.css">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -36,13 +36,13 @@
                         <input type="number" disabled id="ayah-to" class="form-control input-style form-labels"
                                value="7" max="7"
                                min="1" required>
-                        </div>
+                    </div>
                     <div class="col-xs-6 form-group">
                         <span class="label label-success form-labels">از آیه ی:</span>
                         <input type="number" id="ayah-from" class="form-control input-style form-labels" disabled
                                value="1" step="2"
                                max="7" min="1" required>
-                        </div>
+                    </div>
                     <div class="col-xs-6 form-group">
                         <span class="label label-success form-labels">سرعت تلاوت (%) :</span>
                         <input type="number" id="play_rate" class="form-control input-style form-labels" value="100"
@@ -57,13 +57,56 @@
                     <input type="number" id="sensitive" class="form-control input-style form-labels" value="30" min="1"
                            max="500" required></h4>
 
-                    <audio id="player" src="" style="margin-top: 10px;margin-bottom: 10px;max-width: 80%" controls="controls" preload="metadata"
-                           onended="self_recite();"></audio>
+                <audio id="player" src="" style="margin-top: 10px;margin-bottom: 10px;max-width: 80%"
+                       controls="controls" preload="metadata"
+                       onended="self_recite();"></audio>
 
-                    <p id="audiolevel" class="form-labels"></p>
-                    <button type="button" disabled id="start" onClick="start();" class="btn btn-primary form-labels" style="min-width: 30%">شروع
-                    </button>
-                </center>
+                <p id="audiolevel" class="form-labels"></p>
+                <button type="button" disabled id="start" onClick="start();" class="btn btn-primary form-labels"
+                        style="min-width: 30%">شروع
+                </button>
+                <a data-target="#info" data-toggle="modal"><p class="form-labels text-success" style="margin: 7px">
+                    راهنما</p></a>
+            </center>
+            <div id="info" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title form-labels" style="text-align: center">راهنما</h3>
+                        </div>
+                        <div dir="rtl" class="modal-body form-labels">
+                            <h2 style="text-align: center;">بسم الله الرحمن الرحیم</h2>
+                            <h4 style="text-align: justify; line-height: 150%;">ابزاری که پیش رو دارید ابزاریست که برای
+                                حفاظ قرآن کریم و به منظور سهولت مرور محفوظات ایشان طراحی و ساخته شده است. شیوه ی کار آن
+                                به این صورت است که پس از انجام تنظیمات، آیه ای توسط رایانه و با صدای استاد منشاوی پخش می
+                                شود. پس از اتمام آیه نوبت به حافظ می رسد تا آیه ی بعدی را تلاوت نماید. به محض شروع تلاوت
+                                توسط حافظ، رایانه صدای دریافتی را شنیده و تا پایان یافتن آن به انتظار می نشیند. سپس
+                                رایانه اقدام به خواندن آیه ی بعدی می کند.</h4>
+                            <h4 style="text-align: justify; line-height: 150%;">لازم به ذکر است این ابزار توانایی تشخیص
+                                صحیح یا غلط خوانده شدن آیه را ندارد و این کار نیاز به هوش مصنوعی داشته و کاری دشوار و
+                                تخصصی است. در صورتی که مکث میان آیه ای شما طولانی است باید میزان &laquo;تاخیر تلاوت&raquo;
+                                را افزایش دهید تا رایانه مکث شما را به عنوان اتمام آیه تلقی نکند. در صورتی که رایانه اتمام آیه را تشخیص نمی دهد باید میزان «حساسیت میکروفن» را تغییر دهید.<br/>این ابزار هم به
+                                صورت آنلاین و هم آفلاین، هم در رایانه و هم در تلفن های همراه قابل استفاده می باشد و نیاز
+                                به نصب نرم افزار خاصی ندارد. تنها پیش نیاز این ابزار، یک مرورگر وب می باشد.کافیست تا پس از دانلود و استخراج محتویات فایل فشرده، فایل <code>&laquo;index.html&raquo; </code>
+                                را در مرورگر خود باز نمایید.</h4>
+                            <h4 class="text-warning" style="text-align: justify;font-style: italic; line-height: 150%;">
+                                توجه: این ابزار کاملا رایگان و منبع باز می باشد و با مجوز GPLv3 محافظت شده است. لذا هر گونه استفاده ی تجاری منوط به رعایت مفاد این مجوز می باشد. لطفا شما نیز با بیان دیدگاه ها و یا اگر تخصص دارید با بهبود بخشی این ابزار، در این کار مقدس سهیم باشید و سازنده را نیز از ثواب تلاوت ها و دعای خیر خود محروم نسازید.
+                            </h4>
+                            <h4 style="text-align: justify; line-height: 150%;">
+                                دانلود: <a href="">دانلود</a><br>
+                                آدرس پروژه: <a href="https://github.com/Salamdev/Quran_reciterbot">پروژه</a><br>
+                                ایمیل سازنده: <a href="mailto:salamdev@iran.ir">salamdev@iran.ir</a>
+                            </h4>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default form-labels" data-dismiss="modal">بستن</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/bootstrap.js"></script>
@@ -78,7 +121,7 @@
 
             function draw() {
                 micLevel = (mic.getLevel() * 1000).toFixed(2);
-                audiolevel.innerHTML = 'میزان صدای دریافتی: '+micLevel;
+                audiolevel.innerHTML = 'میزان صدای دریافتی: ' + micLevel;
             }
         </script>
     </div>
